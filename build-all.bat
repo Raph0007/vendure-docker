@@ -1,0 +1,1 @@
+docker build vendure-server -t vendure-server-docker

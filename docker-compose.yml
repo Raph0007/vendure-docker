@@ -1,7 +1,7 @@
 services:
-    vendure-server:
-        image: vendure-docker:latest
-        ports:
-            - 3000:3000
-        stdin_open: true
-        tty: true
+  vendure-server:
+    image: vendure-server-docker:latest
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
