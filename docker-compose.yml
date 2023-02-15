@@ -2,8 +2,6 @@ services:
   vendure-server:
     image: vendure-server-docker:latest
     ports: [ 3001:3001 ]
-    stdin_open: true
-    tty: true
     networks: [ vendure-network ]
   vendure-storefront-remix:
     image: vendure-storefront-remix-docker:latest

@@ -1,0 +1,16 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn npx @vendure/create vendure-server
+
+while {1} {
+    expect {
+        "Ok to proceed? (y)" { send "y\r" }
+        "Which database are you using?" { send "\033\[B\033\[B\033\[B\r" }
+        "What identifier do you want to use for the superadmin user?" { send "\r" }
+        "What password do you want to use for the superadmin user?" { send "\r" }
+        "Populate with some sample product data?" { send "\r" }
+        eof { break }
+    }
+}
+close $spawn_id

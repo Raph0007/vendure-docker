@@ -1,7 +1,9 @@
 FROM alpine:latest
-COPY run-create.sh .
-COPY vendure-config.ts .
-RUN apk add --no-cache nodejs npm yarn
-RUN chmod +x run-create.sh
+COPY run-create.exp .
+RUN apk add --no-cache nodejs npm yarn expect
+RUN chmod +x run-create.exp
+RUN ./run-create.exp
+COPY vendure-config.ts vendure-server/src/
 EXPOSE 3001
-CMD [ "./run-create.sh" ]
+WORKDIR vendure-server
+CMD [ "yarn", "dev" ]
