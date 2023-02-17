@@ -1,0 +1,20 @@
+#!/usr/bin/expect -f
+
+set timeout -1
+spawn npx @vue-storefront/cli init
+
+while {1} {
+    expect {
+        "Ok to proceed? (y)" { send "y\r" }
+        "What's your project name?" {
+            send "vendure-storefront-vue\r"
+            break
+        }
+    }
+}
+
+expect "Choose an integration template:"
+send "\033\[B\r"
+
+expect eof
+close $spawn_id

@@ -7,6 +7,10 @@ services:
     image: vendure-storefront-remix-docker:latest
     ports: [ 3000:3000, 8002:8002 ]
     networks: [ vendure-network ]
+  vendure-storefront-vue:
+    image: vendure-storefront-vue-docker:latest
+    ports: [ 3001:3001 ]
+    networks: [ vendure-network ]
 networks:
   vendure-network:
     driver: bridge
