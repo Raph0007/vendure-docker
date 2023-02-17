@@ -1,7 +1,7 @@
 services:
   vendure-server:
     image: vendure-server-docker:latest
-    ports: [ 3001:3001 ]
+    ports: [ 3010:3010 ]
     networks: [ vendure-network ]
   vendure-storefront-remix:
     image: vendure-storefront-remix-docker:latest
