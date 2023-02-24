@@ -27,7 +27,7 @@ or `build-all.sh` (on Linux). The script has to be run in the root directory of 
 This process of using the buildscript for building all containers is most suitable if you intend to build and run all
 containers on the same machine.
 
-## Running
+### Running
 
 To run all containers at once (for example, to compare storefronts), you can just open a terminal and
 run `docker compose up` in the root directory of this repository (or wherever `docker-compose.yml` resides).
