@@ -71,6 +71,17 @@ vendure server.
 This storefront will be started on port 3001, you can check if it's working by accessing `http://localhost:3001` (which
 will show the storefront).
 
-### [TODO] Vendure Storefront NextJS
+### Vendure Storefront NextJS
+
+The Vendure Storefront NextJS docker image (called `vendure-storefront-nextjs-docker` by the buildscript) is built from
+the Dockerfile in `/vendure-storefront-nextjs`. It is later used to start the `vendure-storefront-nextjs` service from
+the compose file.
+
+This container runs the
+[NextJS Storefront for Vendure](https://github.com/vercel/commerce/blob/main/packages/vendure/README.md) as a storefront
+for the vendure server.
+
+This storefront will be started on port 3002, you can check if it's working by accessing `http://localhost:3002` (which
+will show the storefront).
 
 ### [TODO] Vendure Storefront Angular
