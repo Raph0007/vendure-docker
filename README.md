@@ -84,4 +84,18 @@ for the vendure server.
 This storefront will be started on port 3002, you can check if it's working by accessing `http://localhost:3002` (which
 will show the storefront).
 
-### [TODO] Vendure Storefront Angular
+### 5. Vendure Storefront Angular
+
+The Vendure Storefront Angular docker image (called `vendure-storefront-angular-docker` by the buildscript) is built
+from
+the Dockerfile in `/vendure-storefront-angular`. It is later used to start the `vendure-storefront-angular` service from
+the compose file.
+
+This container runs
+the [Angular Storefront for Vendure](https://github.com/vendure-ecommerce/storefront-angular-starter) as a storefront
+for the vendure server.
+
+This storefront will be started on port 3003, you can check if it's working by accessing `http://localhost:3003` (which
+will show the storefront).
+
+### [TODO] Vendure Storefront Svelte

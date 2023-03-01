@@ -15,6 +15,10 @@ services:
     image: vendure-storefront-nextjs-docker:latest
     ports: [ 3002:3000 ]
     networks: [ vendure-network ]
+  vendure-storefront-angular:
+    image: vendure-storefront-angular-docker:latest
+    ports: [ 3003:4201 ]
+    networks: [ vendure-network ]
 networks:
   vendure-network:
     driver: bridge
